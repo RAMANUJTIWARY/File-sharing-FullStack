@@ -1,0 +1,80 @@
+*{
+  margin:0;
+  padding:0;
+}
+.container {
+  background: #000;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+}
+img{
+  width:50%;
+}
+.wrapper{
+  background-color: white;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  font-size: 40px;
+  font-weight: 600;
+  color: #4456AF;
+  margin: 40px 0;
+}
+button{
+  width:150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #4456AF;
+  border: 1px solid #4456AF;
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+button{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+button{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+button:before,
+button:after{
+  position: absolute;
+  content: "UPLOAD";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgb(106, 31, 77);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+button:before{
+  color: #fff;
+  background: #ae248e;
+  transform: rotateY(0deg) translateZ(25px);
+}
+button:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+button:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
